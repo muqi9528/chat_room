@@ -87,5 +87,47 @@ wangxiang
 - 适当配置防火墙以允许必要的端口通信。
 
 ```
+在Ubuntu上安装和配置这些库的教程如下：
 
-请根据你的项目实际情况修改相关信息。如果有其他问题，请告诉我！
+### 1. 安装MySQL Connector/C++（`-lmysqlcppconn`）
+
+1. **更新包列表**：
+   ```bash
+   sudo apt update
+   ```
+
+2. **安装MySQL Connector/C++**：
+   ```bash
+   sudo apt install libmysqlcppconn-dev
+   ```
+
+### 2. 安装hiredis（`-lhiredis`）
+
+1. **安装hiredis库**：
+   ```bash
+   sudo apt install libhiredis-dev
+   ```
+
+### 3. 安装Boost System（`-lboost_system`）
+
+1. **安装Boost库**：
+   ```bash
+   sudo apt install libboost-system-dev
+   ```
+
+### 4. 安装BCrypt（`-lbcrypt`）
+
+1. **安装BCrypt库**：
+   ```bash
+   sudo apt install libbcrypt-dev
+   ```
+
+### 编译和链接
+
+安装这些库后，你可以通过在编译时添加相应的链接选项来使用它们。例如：
+
+```bash
+g++ your_code.cpp -o your_program -lmysqlcppconn -lhiredis -lboost_system -lbcrypt
+```
+
+这将在编译时链接你所需要的库。确保你的代码中包含相应的头文件。
