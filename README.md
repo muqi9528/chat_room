@@ -45,7 +45,7 @@ wangxiang
 1. 克隆仓库：
 
    ```bash
-   git clone https://github.com/yourusername/chatapp.git
+   git clone https://github.com/muqi9528/chat_room.git
    ```
 2. 安装依赖：
    - 确保已安装MySQL和Redis
